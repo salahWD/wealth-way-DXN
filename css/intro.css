@@ -1,0 +1,17 @@
+.splide {
+  height: 600px;
+  background-color: yellowgreen;
+}
+
+.splide__slide {
+  overflow: hidden;
+}
+
+.splide__slide .video {
+  width: 100%;
+  height: 600px;
+}
+
+.splide__pagination {
+  direction: ltr;
+}

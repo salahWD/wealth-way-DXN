@@ -1,0 +1,244 @@
+:root {
+	--blue: #0162c8;
+	--light-blue: #55e7fc;
+	--perple: #755bea;
+	--light-perple: #ff72c0;
+}
+
+.btn.focus, .btn:focus, .btn-info.focus, .btn-info:focus, .btn-info:focus:active, .btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show>.btn-info.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0 rgba(58, 176, 195, .5);
+}
+
+.float {
+	float: right;
+}
+
+.text-align {
+	text-align: left;
+}
+
+form label {
+	margin-bottom: 3px;
+	color: #555 !important;
+}
+
+.text-danger {
+	opacity: 0.75;
+	letter-spacing: .5px;
+}
+
+hr {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+*:hover, *:focus {
+	outline: none;
+	box-shadow: 0 0 0 0 rgba(58, 176, 195, .5);
+}
+
+@media (min-width: 1200px) {
+	.container, .container-lg, .container-md, .container-sm, .container-xl {
+		max-width: 1170px;
+	}
+}
+
+.cap {
+	text-transform: capitalize;
+}
+
+.card-shadow {
+	transition: box-shadow .25s ease-out;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .6);
+}
+
+.card-shadow:hover {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+}
+
+a, a:active, a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+.card .card-options {
+	background-color: transparent !important;
+	position: absolute;
+	padding: 3px;
+	border: none;
+	/* right: 8px; */
+	top: 5px;
+}
+
+.card .dropdown-toggle::after {
+	display: none !important;
+}
+
+.img-responsive {
+	object-position: center;
+	object-fit: cover;
+	width: 100%;
+}
+
+h1 {
+	color: #555;
+}
+
+.custom-alert {
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+	border: 1px solid #d8d8d8;
+	background-color: #FFF;
+	position: relative;
+	padding: 10px;
+	display: block;
+	padding-left: 25px;
+}
+
+.custom-alert .type {
+	background-color: rgb(53, 207, 53);
+	position: absolute;
+	display: block;
+	bottom: -1px;
+	height: calc(100% + 2px);
+	width: 16px;
+	left: -1px;
+	top: -1px;
+}
+
+.custom-alert-danger .type {
+	background-color: rgb(206, 62, 62);
+}
+
+.btn:not(:disabled):not(.disabled).active:focus, .btn:not(:disabled):not(.disabled):active:focus, .btn.dropdown-toggle:focus {
+	outline: none !important;
+	background-color: transparent !important;
+}
+
+.c-white {
+	color: #fff;
+}
+
+.table {
+	display: table;
+}
+
+.table-body {
+	border: 1px solid #EEE;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px 0 #888;
+}
+
+.table-row {
+	display: table-row;
+}
+
+.table-row:not(.table-header) {
+	overflow-y: hidden;
+	height: 80px;
+}
+
+.table-cell {
+	display: table-cell;
+	text-align: center;
+	padding: 10px 5px;
+}
+
+.table-header {
+	display: table-header-group;
+}
+
+.table-header .table-cell {
+	padding: 10px 5px;
+}
+
+.table-body .table-row:nth-of-type(even) .table-cell {
+	background-color: #E9E9E9;
+}
+
+.table-body .table-row:nth-of-type(odd) .table-cell {
+	background-color: #FFF;
+}
+
+.link, .link:hover {
+	cursor: pointer;
+	color: rgb(45, 154, 226);
+	text-decoration: underline;
+}
+
+hr.separet {
+	background-color: var(--light-blue);
+	position: relative;
+	margin: 35px 0;
+}
+
+hr.separet::before {
+	content: "";
+	top: 0;
+	left: 50%;
+	width: 150px;
+	height: 40px;
+	position: absolute;
+	border-radius: 40px;
+	transform: translate(-50%, -50%);
+	background: var(--light-blue);
+	border: 2px solid var(--blue);
+}
+
+.video-shadow {
+	box-shadow: 0 1px 6px rgba(255, 255, 255, .5);
+	transition: all .3s ease;
+}
+
+.video-shadow:hover {
+	box-shadow: 0 4px 8px rgba(255, 255, 255, .75);
+}
+
+.no-color {
+	filter: grayscale(100%);
+}
+
+.popup-background {
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	display: flex;
+	height: 100%;
+	width: 100%;
+	bottom: 0;
+	z-index: 16;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.popup-background .popup {
+	box-shadow: 0 1px 10px 1px #000;
+	background-color: #fff;
+	border-radius: 20px;
+	padding: 50px 20px;
+	width: auto;
+}
+
+.buttons-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.auther-contact {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 20px;
+}
+
+.footer {
+	padding: 30px 0;
+	margin-top: 50px;
+	box-shadow: 0px -2px 20px rgba(0, 0, 0, .6);
+	background: linear-gradient(20deg, var(--light-blue), var(--blue));
+}

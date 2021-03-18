@@ -1,0 +1,94 @@
+.navbar .navbar-collapse {
+  justify-content: flex-start;
+}
+
+html {
+  direction: rtl !important;
+}
+
+.textarea {
+  border-left: none;
+  border-right: 2px solid #E9E9E9;
+}
+
+.card .card-options {
+  right: auto;
+  left: 5px;
+}
+
+.lesson-board .header {
+  text-align: right;
+}
+
+.lesson-board .header h3 {
+  margin-right: 0;
+  margin-left: 30px;
+}
+
+.alert .close {
+  right: unset;
+  left: 0;
+}
+
+.lecture-info .info {
+  padding-left: 30px;
+  padding-right: 0;
+}
+
+.lecture-info .info ul {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.lecture-info .info ul li {
+  padding-right: 20px;
+  text-align: right;
+}
+
+.card .lock {
+  left: 15px;
+  right: auto;
+}
+
+.card .ep_number {
+  left: auto;
+  right: 15px;
+}
+
+.card .card-body {
+  text-align: right;
+}
+
+svg.fa-arrow-right {
+  transform: rotate(180deg);
+}
+
+.float {
+  float: left !important;
+}
+.float-s {
+  float:right !important;
+}
+
+.add-course-btn {
+  margin-left: 0 !important;
+  margin-right: 20px;
+}
+
+.content-row .table-cell:not(:first-of-type) {
+  border-left: none;
+  border-right: .5px solid #ddd;
+}
+
+.label-container {
+  text-align: right;
+}
+
+.text-align {
+  text-align: right !important;
+}
+
+.card.premium::before {
+  letter-spacing: 0;
+  content: "مـمـيـزة";
+}

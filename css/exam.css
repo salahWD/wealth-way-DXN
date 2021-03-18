@@ -1,0 +1,37 @@
+.quest-box .question:not(:first-of-type) {
+  margin-top: 25px;
+}
+
+.anser-deg {
+  line-height: 40px;
+}
+
+.card-success {
+  box-shadow: 0 2px 5px 1px #1d8636;
+}
+
+.card-success .card-header {
+  color: #000;
+  background-color: #b3dabc;
+  border-color: #9bd3a8;
+}
+
+.card-danger {
+  box-shadow: 0 2px 5px 1px #db868e;
+}
+
+.card-danger .card-header {
+  color: #000;
+  background-color: #f7c2c6;
+  border-color: #e09da4;
+}
+
+.question {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}

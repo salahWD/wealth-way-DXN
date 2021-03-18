@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+.name {
+  font-size: 16px;
+  margin: 0 0;
+}
+.id {
+  margin: 0;
+  font-size: 12px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  padding: 4px 0;
+}
+.empty-item {
+  min-height: 32px;
+}
+.table-cell {
+  vertical-align: top;
+  padding: 0;
+}
+.table-cell .item:nth-last-of-type(even) {background-color: #E9E9E9;}
+.table-cell .item:nth-last-of-type(odd) {background-color: #FFF;}
+
+.holder {
+  margin: auto;
+  display: flex;
+  max-width: 630px;
+  flex-direction: column;
+}
+
+.holder .label-container {
+  margin-bottom: 13px;
+}

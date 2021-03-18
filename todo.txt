@@ -1,0 +1,3 @@
+
+/ check if has access in all pages wich user can see and user
+/ change login coockie on change profile info

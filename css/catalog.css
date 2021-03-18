@@ -1,0 +1,11 @@
+.card .card-body {
+  text-align: center;
+}
+
+.card .card-body .desc {
+  max-width: 100%;
+  min-height: 75px;
+  max-height: 75px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

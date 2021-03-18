@@ -1,0 +1,18 @@
+.holder {
+  margin: auto;
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+}
+.holder .label-container {margin-bottom: 13px}
+.holder .label-container label {
+  margin-bottom: 3px;
+  color: #bdbdbd;
+}
+
+.btn {
+  background: linear-gradient(70deg, var(--blue) 30%, var(--light-blue));
+  color: #FFF;
+  border: none;
+  transition: color .3s ease-in-out;
+}

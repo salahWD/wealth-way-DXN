@@ -1,0 +1,56 @@
+.content-row .table-cell {
+    padding: 8px
+}
+
+.content-row .table-cell:not(:first-of-type) {
+    border-left: .5px solid #ddd
+}
+
+.table-row:not(.table-header) {
+    height: auto
+}
+
+.table-body {
+    perspective: 500px;
+}
+
+.table-body .table-row:nth-of-type(odd) .table-cell {
+    background-color: #E9E9E9;
+}
+
+.table-body .table-row:nth-of-type(even) .table-cell {
+    background-color: #FFF;
+}
+
+.custom-alert {
+    width: 450px;
+    margin: auto;
+    padding: 10px;
+    padding-left: 20px;
+    position: relative;
+    text-transform: capitalize;
+    border: 0.5px solid #0062cc;
+}
+
+.custom-alert::before {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    content: "";
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    background-color: #007bff;
+}
+
+.custom-alert-danger {
+    border-color: #dc3545;
+}
+
+.custom-alert-danger::before {
+    background-color: #dc3545;
+}
+
+.empty-row {
+    height: 50px!important;
+}

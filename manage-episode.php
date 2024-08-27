@@ -60,7 +60,7 @@ if ($_SESSION['admin'] == 1) {
 
           $stmt = $con->prepare("INSERT INTO $EPISODES_T (`order`, `episode_name`, `episode_link`, `episode_img`, `add_date`) VALUES (?, ?, ?, ?, NOW())");
           $stmt->execute([$count_of_ep, $e_name, $url, $fileName]);
-          header("Location: manage-episode.php");//come
+          header("Location: manage-episode.php");
           exit();
         }
       }?>
@@ -274,7 +274,7 @@ if ($_SESSION['admin'] == 1) {
             $stmt->execute([$e_name, $url, $e_order, $eid]);
           }
         }
-        header("Location: manage-episode.php?action=manage");//come
+        header("Location: manage-episode.php?action=manage");
         exit();
       }elseif (isset($_GET['e']) && !empty($_GET['e']) && is_numeric($_GET['e'])) {
         $eid = intval($_GET['e']);
@@ -429,6 +429,7 @@ if ($_SESSION['admin'] == 1) {
       exit();
     }
     ?>
+    </div>
   <?php
   include 'include/footer.php';
 }else {// ther is no session user

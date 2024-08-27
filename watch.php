@@ -9,6 +9,7 @@ if (isset($_SESSION['user'])) {
   }else {
     if ($data = getEpisode($eid, $_SESSION['id'])) {
       include 'include/header.php';?>
+      <?php history_log($_SESSION['id'], 1, $eid);?>
       <div class="container">
         <div class="row">
           <h2 class="cap col-md-12 text-center mb-5"><?php echo $data['episode_name']?></h2>

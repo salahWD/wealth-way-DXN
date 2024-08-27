@@ -63,15 +63,6 @@ if (isset($_SESSION['user'])) {
             <div class="mb-3 form-row">
               <label for="phone"><?php echo $LANG['PHONE_NUMBER'];?></label>
               <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">
-                    <select name="number_start" class="form-control form-control-sm" required>
-                      <option value="1">+90</option>
-                      <option value="2">+54</option>
-                      <option value="3">+12</option>
-                    </select>
-                  </span>
-                </div>
                 <input
                     type="number"
                     class="form-control <?php if (isset($errors['phone_error']) && !empty($errors['phone_error'])) {echo 'is-invalid';}?>"
@@ -93,7 +84,8 @@ if (isset($_SESSION['user'])) {
                 id="dxn"
                 name="dxn"
                 placeholder="DXN id"
-                value="<?php echo $data['dxn_id'];?>">
+                value="<?php echo $data['dxn_id'];?>"
+                required>
               <div class="invalid-feedback text-danger"><?php if (isset($errors['dxn_error']) && !empty($errors['dxn_error'])) {echo $LANG[$errors['dxn_error']];}?></div>
             </div>
             <div class="mb-3 form-row">
@@ -114,7 +106,7 @@ if (isset($_SESSION['user'])) {
                       readonly="true"
                       class="form-control"
                       id="token"
-                      value="www.healthway.com/introduction.php?p=<?php echo $data['token'];?>">
+                      value="wealthway.ml/introduction.php?la=<?php echo $data['token'];?>">
                   <button type="button" data-msg='<i class="far fa-fw fa-clone"></i> تم النسخ ' id="copyToken" class="copy btn btn-primary"><i class="far fa-fw fa-clone"></i><?php echo $LANG["COPY"];?></button>
                 </div>
               </div>

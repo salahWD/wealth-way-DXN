@@ -15,7 +15,9 @@ $LANG = [
   'SD_TABLE'      => 'جدول الماسية',
   'DAYLE_TASK'    => 'المهمة اليومية',
   'DAYLE_TASKS'   => 'المهام اليومية',
+  'BE_A_MEMBER'   => 'كُن موزعاً',
   'LOGIN'         => 'تسجيل الدخول',
+  'REMEMBER_ME'   => 'تذكرني',
   'SIGNUP'        => 'تسجيل',
   'LOGOUT'        => 'تسجيل الخروج',
   'EDIT'          => 'تعديل',
@@ -40,7 +42,7 @@ $LANG = [
   'ABOUT_COMPANY_AND_SYSTEM'    => 'حول الشركة و النظام',
   'LERNING'                     => 'التدريب',
   'WATCH_TUTORIALS'             => 'شاهد التدريبات',
-  'BECOME_A_DISTRIBUTOR'        => 'كُن موزعاً',
+  'BECOME_A_DISTRIBUTOR'        => 'احصل على رقم عضوية',
   'SD_PLAN'                     => 'خطة الماسية',
   'STAR_DIAMOND_PLAN'           => 'طريقك للوصول الى الماسية',
   'DAYLE_TASKS_TABLE'           => 'جدول المهام اليومية',
@@ -67,6 +69,7 @@ $LANG = [
   'EDIT_EPISODE'                          => 'تعديل الدرس',
   'ADD_EXAM'                              => 'أضف اختباراً',
   'PERSONAL_ADVANCE'                      => 'التقدم الشخصي',
+  'TEAM_ADVANCE'                          => 'تقدم الفريق',
   'EPISODE_NAME'                          => 'اسم الدرس',
   'ADD'                                   => 'أضف',
   'NAME_CANT_BE_EMPTY'                    => 'لا يمكن ان يكون الاسم فارغا',
@@ -120,10 +123,12 @@ $LANG = [
 
   // start EDIT-PROFILE PAGE
   'PASSWORD'                  => 'كلمة المرور',
-  'ACCOUNT_PASSWORD'          => 'كلمة المرور الحساب',
+  'ACCOUNT_PASSWORD'          => 'كلمة مرور الحساب',
   'INVALID_USERNAME'          => 'اسم مستخدم خاطئ',
   'INVALID_PHONE_NUMBER'      => 'رقم هاتف خاطئ',
   'INVALID_DXN_ID'            => 'معرف دي اكس ان خاطئ',
+  'HAVE_AN_ACCOUNT_?'         => 'هل تمتلك حساب بالفعل ؟',
+  'NOT_A_MEMBER_?'            => 'لا تملك حساب ؟',
 
   // start prograss personal
   'DONE_TRAININGS'    => 'التقدم في الدروس',

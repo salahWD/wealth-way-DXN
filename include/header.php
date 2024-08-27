@@ -173,8 +173,8 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto justify-content-between text-center">
+      <div class="collapse justify-content-between navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto justify-content-between text-center pr-lg-3">
           <li class="nav-item<?php if (isset($pageName) && $pageName == 'home') {echo ' active';}?>">
             <a class="nav-link" href="home.php"><?php echo $LANG['HOME'];?> <span class="sr-only">(current)</span></a>
           </li>
@@ -190,25 +190,42 @@
           <li class="nav-item<?php if (isset($pageName) && $pageName == 'Products') {echo ' active';}?>">
             <a class="nav-link" href="products.php"><?php echo $LANG['PRODUCTS'];?></a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-cog"></i> <?php echo $_SESSION['user']?>
-            </a>
-            <div class="dropdown-menu text-align" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="edit-profile.php"><i class="far fa-edit fa-fw"></i> <?php echo $LANG['PROFILE'];?></a>
-              <a class="dropdown-item" href="advance.php"><i class="far fa-edit fa-fw"></i> <?php echo $LANG['PERSONAL_ADVANCE'];?></a>
-              <?php
-                if ($_SESSION['admin']) {?>
+          <?php if (isset($_SESSION['user'])):?>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-fw fa-cog"></i> <?php echo $_SESSION['user']?>
+              </a>
+              <div class="dropdown-menu text-align" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="edit-profile.php"><i class="far fa-edit fa-fw"></i> <?php echo $LANG['PROFILE'];?></a>
+                <a class="dropdown-item" href="advance.php"><i class="far fa-edit fa-fw"></i> <?php echo $LANG['PERSONAL_ADVANCE'];?></a>
+                <a class="dropdown-item" href="advance.php?t=1"><i class="far fa-edit fa-fw"></i> <?php echo $LANG['TEAM_ADVANCE'];?></a>
+                <?php if (isset($_SESSION['admin']) && $_SESSION['admin']) {?>
+                  <div class="dropdown-divider"></div>
+                  <a href="manage-episode.php" class="dropdown-item cap"><i class="fas fa-plus-circle fa-fw"></i> <?php echo $LANG['ADD_EPISODE'];?></a>
+                  <a href="manage-episode.php?action=manage" class="dropdown-item cap"><i class="fas fa-plus-circle fa-fw"></i> <?php echo $LANG['MANAGE_LECTURES'];?></a>
+                <?php }?>
                 <div class="dropdown-divider"></div>
-                <a href="manage-episode.php" class="dropdown-item cap"><i class="fas fa-plus-circle fa-fw"></i> <?php echo $LANG['ADD_EPISODE'];?></a>
-                <a href="manage-episode.php?action=manage" class="dropdown-item cap"><i class="fas fa-plus-circle fa-fw"></i> <?php echo $LANG['MANAGE_LECTURES'];?></a>
-                <?php
-                }
-              ?>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="exit.php"><i class="fas fa-sign-out-alt fa-fw"></i> <?php echo $LANG['LOGOUT'];?></a>
-            </div>
-          </li>
+                <a class="dropdown-item" href="exit.php"><i class="fas fa-sign-out-alt fa-fw"></i> <?php echo $LANG['LOGOUT'];?></a>
+              </div>
+            </li>
+          <?php endif;?>
+        </ul>
+        <ul class="nav justify-content-center pb-2 pt-1 pr-lg-3">
+          <?php if(isset($_SESSION['info']['instagram']) && !empty($_SESSION['info']['instagram'])):?>
+            <li class="nav-item">
+              <a href="https://www.instagram.com/<?php echo $_SESSION['info']['instagram'];?>"><span class="social-icon instagram"><i class="fab fa-2x fa-fw fa-instagram"></i></span></a>
+            </li>
+          <?php endif;?>
+          <?php if(isset($_SESSION['info']['phone_number']) && !empty($_SESSION['info']['phone_number'])):?>
+            <li class="nav-item">
+              <a href="https://wa.me/<?php echo $_SESSION['info']['phone_number'];?>"><span class="social-icon whatsapp"><i class="fab fa-2x fa-fw fa-whatsapp"></i></span></a>
+            </li>
+          <?php endif;?>
+          <?php if(isset($_SESSION['info']['facebook']) && !empty($_SESSION['info']['facebook'])):?>
+            <li class="nav-item">
+              <a href="https://www.facebook.com/<?php echo $_SESSION['info']['facebook'];?>"><span class="social-icon facebook"><i class="fab fa-2x fa-fw fa-facebook"></i></span></a>
+            </li>
+          <?php endif;?>
         </ul>
       </div>
     </div>

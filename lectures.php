@@ -75,7 +75,7 @@ if (isset($_SESSION['user'])):
   <?php
   include $inc . '/footer.php';
 else:
-  header("index.php");
+  header("Location: index.php?form=signup&lp=lectures.php");
   exit();
 endif;
 ?>

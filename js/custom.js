@@ -215,7 +215,7 @@ if (document.getElementById("visibility_viw")) {
 
 if (document.querySelectorAll(".quest-box").length > 0) {
   let percent = document.getElementById("examPercent");
-  if (percent.innerHTML.substr(0, percent.innerHTML.length - 1) >= 50) {
+  if (percent.innerHTML.substr(0, percent.innerHTML.length - 1) == 100) {
     _(".card").classList.add("card-success");
   } else {
     _(".card").classList.add("card-danger");
@@ -242,8 +242,9 @@ if (_(".addQuestion")) {
     oldRemoveAnserBtn.forEach((rmAnBtm) => {
       rmAnBtm.addEventListener("click", () => {
         rmAnBtm.parentElement.parentElement.style.display = `none`;
-        rmAnBtm.parentElement.parentElement.querySelector(`input:nth-of-type(2)`).value =
-          "delete";
+        rmAnBtm.parentElement.parentElement.querySelector(
+          `input:nth-of-type(2)`
+        ).value = "delete";
       });
     });
   }
@@ -259,19 +260,19 @@ if (_(".addQuestion")) {
       ).length;
       let oldanserInput = document.createElement("input");
       let oldisRightInput = document.createElement("input");
-      let oldIsrightBtn = document.createElement('span');
-      oldIsrightBtn.classList.add('is_right', 'bg-danger');
-      oldIsrightBtn.addEventListener('click', function () {
-        this.classList.toggle('bg-danger');
-        this.classList.toggle('bg-success');
-        if (this.classList.contains('bg-danger')) {
+      let oldIsrightBtn = document.createElement("span");
+      oldIsrightBtn.classList.add("is_right", "bg-danger");
+      oldIsrightBtn.addEventListener("click", function () {
+        this.classList.toggle("bg-danger");
+        this.classList.toggle("bg-success");
+        if (this.classList.contains("bg-danger")) {
           oldIsrightBtn.value = 0;
-        }else {
+        } else {
           oldIsrightBtn.value = 1;
         }
       });
-      let oldOptionsArea = document.createElement('div');
-      oldOptionsArea.classList.add('options');
+      let oldOptionsArea = document.createElement("div");
+      oldOptionsArea.classList.add("options");
       let oldAnserContainer = document.createElement("div");
       let oldRemoveAnserBtn = document.createElement("span");
       oldRemoveAnserBtn.classList.add("anser-remove-btn");
@@ -335,19 +336,22 @@ if (_(".addQuestion")) {
     });
   });
 
-  let oldIsrightBtn = document.querySelectorAll('.options .is_right');
-  oldIsrightBtn.forEach(OldIsright => {
-    OldIsright.addEventListener('click', function () {
-      this.classList.toggle('bg-success');
-      this.classList.toggle('bg-danger');
-      if (this.classList.contains('bg-danger')) {
-        this.parentElement.parentElement.querySelector('input:nth-of-type(2)').value = 0;
-      }else {
-        this.parentElement.parentElement.querySelector('input:nth-of-type(2)').value = 1;
+  let oldIsrightBtn = document.querySelectorAll(".options .is_right");
+  oldIsrightBtn.forEach((OldIsright) => {
+    OldIsright.addEventListener("click", function () {
+      this.classList.toggle("bg-success");
+      this.classList.toggle("bg-danger");
+      if (this.classList.contains("bg-danger")) {
+        this.parentElement.parentElement.querySelector(
+          "input:nth-of-type(2)"
+        ).value = 0;
+      } else {
+        this.parentElement.parentElement.querySelector(
+          "input:nth-of-type(2)"
+        ).value = 1;
       }
     });
   });
-
 
   let questionsCount = document.querySelectorAll(".question-box").length + 1;
   let cancelBtnContent =
@@ -384,7 +388,7 @@ if (_(".addQuestion")) {
       removeBtn.parentElement.parentElement.parentElement.remove();
     });
     removeBtn.innerHTML = cancelBtnContent;
-    removeBtn.classList.add('big_close_btn');
+    removeBtn.classList.add("big_close_btn");
     cardHeader.appendChild(removeBtn);
     headingText.innerHTML = `question ${questionsCount}`;
     inputHeadin.value = headingText.innerHTML;
@@ -437,20 +441,20 @@ if (_(".addQuestion")) {
       isRightInput.value = `0`;
       anserinput.classList.add("form-control", "mb-2", "anser-input");
       let optionsArea = document.createElement("div");
-      optionsArea.classList.add('options');
+      optionsArea.classList.add("options");
       let removeAnserBtn = document.createElement("span");
       removeAnserBtn.classList.add("anser-remove-btn");
       removeAnserBtn.addEventListener("click", () => {
         removeAnserBtn.parentElement.remove();
       });
-      let is_right = document.createElement('span');
-      is_right.classList.add('is_right', 'bg-danger');
-      is_right.addEventListener('click', function () {
-        this.classList.toggle('bg-danger');
-        this.classList.toggle('bg-success');
-        if (this.classList.contains('bg-danger')) {
+      let is_right = document.createElement("span");
+      is_right.classList.add("is_right", "bg-danger");
+      is_right.addEventListener("click", function () {
+        this.classList.toggle("bg-danger");
+        this.classList.toggle("bg-success");
+        if (this.classList.contains("bg-danger")) {
           isRightInput.value = 0;
-        }else {
+        } else {
           isRightInput.value = 1;
         }
       });
@@ -509,9 +513,11 @@ if (dayleTable) {
       textarea.placeholder = textarea.getAttribute("data-place");
     });
     textarea.addEventListener("input", () => {
-      textarea.parentElement.parentElement.querySelectorAll('textarea').forEach(textarea => {
-        textarea.name = textarea.getAttribute("data-name");
-      });
+      textarea.parentElement.parentElement
+        .querySelectorAll("textarea")
+        .forEach((textarea) => {
+          textarea.name = textarea.getAttribute("data-name");
+        });
       let hiddenId = textarea.parentElement.parentElement.parentElement.querySelector(
         "input.id"
       );
